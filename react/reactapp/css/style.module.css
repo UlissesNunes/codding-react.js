@@ -1,0 +1,48 @@
+div.my_div {
+    color: black;
+   display: flex;
+    transform: scale3d(1, 1, 1);
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background-color: rgb(123, 123, 123);
+    padding: 30px;
+    margin: 0px auto;
+    margin-top: 45px;
+    width: 40%;
+    height: 150px;
+    border: 1px solid gray;
+    
+    
+}
+div.my_div:hover {
+    
+    color: rgb(0, 0, 0);
+    box-shadow: 10px 10px 10px rgba(0, 110, 143, 0.851);
+    transition: all 3.3s ease;
+}
+
+.my_sh {
+text-shadow: 11px 1px 2px rgba(0, 0, 0, 0.5);
+    color: rgb(13, 121, 131);
+    font-size: 70px;
+    background-color: rgb(39, 39, 39);
+    width: 90%;
+    transition: all 5.3s ease-in-out;
+border: 5px solid rgb(25, 95, 117);
+box-shadow: 10px 10px 10px rgba(0, 110, 143, 0.451);
+    padding: 10px;
+    margin: 0 auto !important;
+    text-align: center;
+}
+
+.my_sh:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(123, 123, 123, 0.275);
+    box-shadow: 10px 10px 10px rgba(0, 110, 143, 0.451);
+    transition: all 3.3s ease;
+    transform: rotate3d(1, 11, 0, 50deg);
+    cursor: pointer;
+   text-shadow: 7px 3px 2px rgba(0, 110, 143, 0.751);
+    
+}
