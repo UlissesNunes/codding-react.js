@@ -1,6 +1,8 @@
 import SecaoModule from '/componets/SecaoModule'
 import Adicaomodule from '/componets/Adicaomodule'
 
+import Header from '/componets/Header'
+
 import { useState } from 'react'
 
 import './App.css'
@@ -11,9 +13,13 @@ const [data , setData] = useState(10)
 
 console.log(data)
 
+// O useState é um Hook do React que permite adicionar o estado a um componente funcional.
+
+const carro = "Fusca 1970"
 
 
-// Ele retorna um array com dois elementos: o valor atual do estado e uma função para atual
+
+//retorna um array com dois elementos: o valor atual do estado e uma função para atual
 const [lista2] = useState([{id: 1, nome: "João da Silva" , age: 29}, {id: 2, nome: "Maurício alencar" , age: 34}, {id: 3, nome: "Joselino barbosa" , age: 45}])
 
 
@@ -26,9 +32,8 @@ const click = () => {
  
   return (
     <>
-    <Adicaomodule />
-    <SecaoModule />
-       <div className="min-h-screen bg-gray-200 flex items-center justify-center">
+   <Header />
+       <div className="min-h-screen flex items-center justify-center">
       <h1 className="text-2xl font-bold text-blue-600">DIFICINNN MAS TAILWIND COM REACT É REALIDADEEEEE!</h1> </div>
       
    <div>
@@ -48,6 +53,20 @@ const click = () => {
  {/* VDOM OU VIRTUAL DOCUMENT OBJECT MODEL */}
    <p>{cont}</p>
    <button onClick={click}>CLIQUE </button>
+
+
+
+
+
+
+<p>Como é o seu carro:<strong>  É um {carro}</strong>  </p>
+
+
+
+
+
+
+
     </>
   )
 }
