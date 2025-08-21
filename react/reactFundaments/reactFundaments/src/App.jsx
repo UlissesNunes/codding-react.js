@@ -1,5 +1,7 @@
 
 import { useState } from 'react'
+import MylistCar from "./componets/MylistCar.jsx"
+
 
 import './App.css'
 
@@ -35,9 +37,25 @@ const emailEnvio = () => {
       window.location.href = "https://oficinacrossbike.com.br"
     } 
   } else {
-    alert("Por favor, insira um email válido.");
+    window.alert("Por favor, insira um email válido.");
   }
 };
+
+
+ const carList = [
+  { id: 1, name: "Fusca 1970", color: "azul", price: 15000 },
+  { id: 2, name: "Civic 2020", color: "preto", price: 90000 },
+  { id: 3, name: "Gol 2018", color: "branco", price: 45000 },
+  { id: 4, name: "Onix 2021", color: "prata", price: 60000 },
+  { id: 5, name: "Fiesta 2015", color: "vermelho", price: 30000 },
+  { id: 6, name: "Palio 2012", color: "verde", price: 20000 },
+  { id: 7, name: "Corolla 2019", color: "azul", price: 80000 },
+  { id: 8, name: "HB20 2022", color: "preto", price: 70000 },
+  { id: 9, name: "Sandero 2016", color: "branco", price: 35000 }
+
+
+ ]
+  
   
   
   
@@ -47,7 +65,7 @@ const emailEnvio = () => {
      <p>Objetivo central = Dominar react e tailwind e fazer meu portifólio inteiro com eles e ter ao menos 5 grandes projetos</p> <p>Sendo 2 deles com REACT/TAILWIND/TYPESCRIPT</p>
 
      <h2>Cadastro: </h2>
-      
+    
       <ul>
         {users.map((user) => (
           <li key={user.id} className>
@@ -80,10 +98,15 @@ const emailEnvio = () => {
       <h2>Notas</h2>
 
       <p> Insira email : <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <input type="button" value="Enviar" onClick={emailEnvio} /> </p>
-      
-      
-
-
+     <ul> 
+      {carList.map((car) => (< MylistCar 
+        key={car.id}      
+        name={car.name}
+        color={car.color}
+        price={car.price.toLocaleString('pt-BR')}
+        />
+      ))}
+</ul>
   </>
   )
 }
