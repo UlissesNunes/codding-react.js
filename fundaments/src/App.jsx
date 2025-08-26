@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import MyCarList from './components/myCarList.jsx' 
+import MyVestuario from './components/myVestuario.jsx'
 import './App.css'
 
 function App() {
@@ -12,6 +13,46 @@ function App() {
     { id: 4, nome: 'OnePlus 9', cor:'Rosa', preco: 1700 },
     { id: 5, nome: 'Xiaomi Mi 11', marca: 'Xiaomi' , cor: 'branco', tela: 'amoled', preco : 1600 }
   ]
+
+  const MyCars = [
+    { id: 1, brand: 'Volkswagen', model: 'Polo', year: '2019', color: 'Preto', price: 800000, imgSrc:"https://listcarbrands.com/wp-content/uploads/2015/10/Volkswagen-logo-Description.jpg", altText:"Carro" },
+    { id: 2, brand: 'Volkswagen', model: 'Jetta', year: '2021', color: 'Branco', price: 70000 },
+    { id: 3, brand: 'Volkswagen', model: 'Golf', year: '2017', color: 'Prata', price: 65000 },
+    { id: 4, brand: 'Volkswagen', model: 'Amarok', year: '2024', color: 'Azul', price: 190000 },
+    { id: 5, brand: 'Volkswagen', model: 'Tcross', year: '2020', color: 'Vermelho', price: 120000 }
+  ]
+
+  const VestuarioCompleto = [
+    { id: 1, tipo: 'Camisa', marca: 'Nike', tamanho: 'M', cor: 'Preto', preco: 150 },
+    { id: 2, tipo: 'Calça', marca: 'Adidas', tamanho: 'G', cor: 'Azul', preco: 200 },
+    { id: 3, tipo: 'Jaqueta', marca: 'Puma', tamanho: 'GG', cor: 'Vermelho', preco: 300 },
+    { id: 4, tipo: 'Tênis', marca: 'Reebok', tamanho: '42', cor: 'Branco', preco: 250 },
+    { id: 5, tipo: 'Boné', marca: 'New Era', tamanho: 'Único', cor: 'Cinza', preco: 100 } 
+  ]
+
+  const MeusMoveisNovos = [
+    { id: 1, tipo: 'Sofá', material: 'Couro', cor: 'Marrom', preço: 2500 },
+    { id: 2, tipo: 'Mesa de Jantar', material: 'Madeira', cor: 'Branco', preço: 1800 },
+    { id: 3, tipo: 'Cadeira', material: 'Plástico', cor: 'Preto', preço: 300 },
+    { id: 4, tipo: 'Estante', material: 'Metal', cor: 'Cinza', preço: 1200 },
+    { id: 5, tipo: 'Cama', material: 'Madeira', cor: 'Natural', preço: 2000 },
+    { id: 6, tipo: 'Guarda-Roupa', material: 'MDF', cor: 'Branco', preço: 2200 },
+    { id: 7, tipo: 'Rack para TV', material: 'Madeira', cor: 'Preto', preço: 900 },
+    { id: 8, tipo: 'Mesa de Centro', material: 'Vidro', cor: 'Transparente', preço: 600 },
+    { id: 9, tipo: 'Poltrona', material: 'Tecido', cor: 'Azul', preço: 800 },
+    { id: 10, tipo: 'Aparador', material: 'Madeira', cor: 'Marrom', preço: 700 },
+    { id: 11, tipo: 'Cômoda', material: 'MDF', cor: 'Branco', preço: 1500 },
+    { id: 12, tipo: 'Escrivaninha', material: 'Madeira', cor: 'Natural', preço: 1300 },
+    { id: 13, tipo: 'Banco', material: 'Metal', cor: 'Preto', preço: 400 },
+    { id: 14, tipo: 'Prateleira', material: 'Madeira', cor: 'Branco', preço: 500 },
+    { id: 15, tipo: 'Cadeira de Escritório', material: 'Couro', cor: 'Preto', preço: 1100 },
+    { id: 16, tipo: 'Mesa de Escritório', material: 'Madeira', cor: 'Marrom', preço: 1600 },
+    { id: 17, tipo: 'Cama Box', material: 'Tecido', cor: 'Cinza', preço: 3000 },
+    { id: 18, tipo: 'Berço', material: 'Madeira', cor: 'Branco', preço: 1400 },
+    { id: 19, tipo: 'Cadeira de Balanço', material: 'Madeira', cor: 'Natural', preço: 750 },
+    { id: 20, tipo: 'Mesa Lateral', material: 'Metal', cor: 'Dourado', preço: 550 }
+
+  ] 
 
   return (
     <> <h1>{name}, Aprofunde seus Fundamentos do react</h1>
@@ -34,6 +75,7 @@ function App() {
       </li>  
     ))}
   </ul>
+
 {/*
 * Aqui entendemos que com o map podemos pegar qualquer dado de listas (pode ser uma api externa também ) na parte lógica e importamos aqui 
 
@@ -44,20 +86,54 @@ function App() {
 
 <h2>Renderização de Listas através dos components</h2>
 
-    <h3>Lista renderizada de carros:</h3>
-    <MyCarList brand="Audi" model="X5" year="2022" color="Preto" price={300000} />
-    <MyCarList brand="Audi" model="A4" year="2021" color="Branco" price={250000} />
-    <MyCarList brand="Audi" model="Corolla" year="2020" color="Prata" price={120000} />
-    <MyCarList brand="Audi" model="Civic" year="2019" color="Azul" price={90000} />
-    <MyCarList brand="Audi" model="Focus" year="2018" color="Vermelho" price={80000} />
-    <MyCarList brand="Audi" model="Onix" year="2023" color="Cinza" price={70000} />
-    <MyCarList brand="Audi" model="Gol" year="2022" color="Amarelo" price={60000} />
-    <MyCarList brand="Audi" model="Uno" year="2021" color="Verde" price={50000} />
-    <MyCarList brand="Audi" model="Kicks" year="2020" color="Laranja" price={40000} />
-    <MyCarList brand="Audi" model="HB20" year="2019" color="Roxo" price={30000} />
-    <MyCarList brand="Audi" model="Seltos" year="2023" color="Marrom" price={350000} />
+    <section className="car">
+      <h3>Lista renderizada de carros:</h3>
+      <MyCarList brand="Audi" model="X5" year="2022" color="Preto" price={300000} />
+      <MyCarList brand="Audi" model="A4" year="2021" color="Branco" price={250000} />
+      <MyCarList brand="Audi" model="Corolla" year="2020" color="Prata" price={120000} />
+      <MyCarList brand="Audi" model="Seltos" year="2023" color="Marrom" price={350000} />
+    </section>
+  <h1>Volkswagen</h1>
 
+  {/* Aqui estamos usando o map para percorrer o array de objetos MyCars e renderizar um componente MyCarList para cada carro na lista. */ 
+  }
+  <section className="volksvagenCar">
+    {MyCars.map((car) => (
+      <MyCarList
+        brand={car.brand}
+        model={car.model}
+        year={car.year}
+        color={car.color}
+        price={car.price}
+        key={car.id}
+        />
+        ))}
+  </section>
+    <section className='vestuario'> 
+      {VestuarioCompleto.map((vestuario ) => (
+        <MyVestuario
+        preço={vestuario.preco}
+        marca={vestuario.marca}
+        tamanho={vestuario.tamanho}
+        cor={vestuario.cor}
+        tipo={vestuario.tipo}
+        key={vestuario.id}
+        />
 
+      ))}
+</section>
+
+    <section className='moveis'>
+      {MeusMoveisNovos.map((moveis) => (
+        <MyVestuario
+        preço={moveis.preço}
+        material={moveis.material}
+        cor={moveis.cor}
+        tipo={moveis.tipo}
+        key={moveis.id}
+        />
+      ))}
+  </section>
     </>
   )
 }

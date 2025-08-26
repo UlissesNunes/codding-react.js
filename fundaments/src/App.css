@@ -13,3 +13,76 @@ img {
   height: auto;
   vertical-align:middle;
 }
+
+.volksvagenCar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  justify-items: center;
+  margin: 50px;
+  background-color: #ffdfffcc;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(56, 11, 52);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+
+.vestuario {
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(116, 255, 255, 0.54);
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(34, 56, 11);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 20px;
+}
+
+.vestuario ul {
+  list-style: none;
+  padding: 0;
+}
+
+.moveis ul {
+  list-style: none;
+  padding: 0;
+}
+
+strong {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.moveis {
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  gap: 2px;
+  background-color: rgba(255, 255, 116, 0.54);
+  gap: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(34, 56, 11);
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+.car {
+
+  background-color: rgba(116, 255, 116, 0.14);
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(213, 255, 169);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+ 
+}
+
