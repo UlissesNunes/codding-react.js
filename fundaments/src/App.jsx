@@ -3,6 +3,9 @@ import MyCarList from './components/myCarList.jsx'
 import MyVestuario from './components/myVestuario.jsx'
 import MyMoveis from './components/myMoveis.jsx'
 import MyLivros from './components/myLivros.jsx'
+import PropChildren from './components/propChildren.jsx'
+import Mensagem from './components/mensagem.jsx'
+import NewFunctionProp from './components/newFunctionProp.jsx'  
 import './App.css'
 
 function App() {
@@ -62,6 +65,15 @@ function App() {
       { id: 4, titulo: 'O Pequeno Príncipe', autor: 'Antoine de Saint-Exupéry', ano: 1943, genero : 'Infantil', preco: 50.00 },
       { id: 5, titulo: 'A Revolução dos Bichos', autor: 'George Orwell', ano: 1945, genero: 'Satírico', preco:  70.00 }
   ] 
+
+  const mensagem = () => {
+    alert('Função disparada!')
+  }
+
+  
+  const lidarComClique = () => {
+    console.log('O botão no componente filho foi clicado!');
+  };
 
   return (
     <> <h1>{name}, Aprofunde seus Fundamentos do react</h1>
@@ -156,6 +168,26 @@ function App() {
       />
     ))}
   </section>
+
+
+  {/* A PROPIEDADE - PROPS CHILDREN*/}
+ 
+    
+      <PropChildren>
+          <p>Você pode passar qualquer elemento ou componente como children.</p>
+      </PropChildren>
+     
+     <Mensagem myFunction={mensagem} />
+      
+
+
+        <div>
+      <h1>Componente Pai</h1>
+      {/* 2. Passamos a função para o componente filho */}
+      <NewFunctionProp aoClicar={lidarComClique} />
+    </div>
+  
+
     </>
   )
 }
