@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import MyCarList from './components/myCarList.jsx' 
 import MyVestuario from './components/myVestuario.jsx'
+import MyMoveis from './components/myMoveis.jsx'
+import MyLivros from './components/myLivros.jsx'
 import './App.css'
 
 function App() {
@@ -52,6 +54,13 @@ function App() {
     { id: 19, tipo: 'Cadeira de Balanço', material: 'Madeira', cor: 'Natural', preço: 750 },
     { id: 20, tipo: 'Mesa Lateral', material: 'Metal', cor: 'Dourado', preço: 550 }
 
+  ]
+    const livros = [
+      { id: 1, titulo: 'O Senhor dos Anéis', autor: 'J.R.R. Tolkien', ano: 1954, genero: 'Fantasia', preco: 120.00 },
+      { id: 2, titulo: '1984', autor: 'George Orwell', ano: 1949, genero: 'Distopia', preco: 80.00 },
+      { id: 3, titulo: 'Dom Quixote', autor: 'Miguel de Cervantes', ano: 1605, genero: 'Clássico', preco: 150.00 },
+      { id: 4, titulo: 'O Pequeno Príncipe', autor: 'Antoine de Saint-Exupéry', ano: 1943, genero : 'Infantil', preco: 50.00 },
+      { id: 5, titulo: 'A Revolução dos Bichos', autor: 'George Orwell', ano: 1945, genero: 'Satírico', preco:  70.00 }
   ] 
 
   return (
@@ -125,7 +134,7 @@ function App() {
 
     <section className='moveis'>
       {MeusMoveisNovos.map((moveis) => (
-        <MyVestuario
+        <MyMoveis
         preço={moveis.preço}
         material={moveis.material}
         cor={moveis.cor}
@@ -133,6 +142,19 @@ function App() {
         key={moveis.id}
         />
       ))}
+  </section>
+
+  <section>
+    {livros.map((livro) => (
+      <MyLivros
+      titulo={livro.titulo}
+      autor={livro.autor}
+      ano={livro.ano}
+      genero={livro.genero}
+      preco={livro.preco}
+      key={livro.id}
+      />
+    ))}
   </section>
     </>
   )
