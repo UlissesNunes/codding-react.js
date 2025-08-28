@@ -6,6 +6,8 @@ import MyLivros from './components/myLivros.jsx'
 import PropChildren from './components/propChildren.jsx'
 import Mensagem from './components/mensagem.jsx'
 import NewFunctionProp from './components/newFunctionProp.jsx'  
+import ExecuteFunction from './components/executeFunction.jsx'
+import MyDreams from './components/myDreams.jsx'  
 import './App.css'
 
 function App() {
@@ -66,6 +68,18 @@ function App() {
       { id: 5, titulo: 'A Revolução dos Bichos', autor: 'George Orwell', ano: 1945, genero: 'Satírico', preco:  70.00 }
   ] 
 
+
+  const MyLifeDreams = [
+    { id: 1, profissional: 'Desenvolvedor Full Stack', area: 'Tecnologia', salario: 18000 },
+    { id: 2,
+      pessoal:  'Sonho de Conhecer Israel, Jerusalém e os locais onde meu Jesus passou, Quero ainda conhecer a Alianz Arena e ver Jamal 10 em campo, Casar com Mariana alcantara de santana aos 21 anos e ela com 23' , 
+      paises: 'Alemanha,  Israel, Inglaterra'
+     },
+    { id: 3, financeiro: 'Ter uma estabilidade financeira para viver com meu amorzinho de 1,48, com uma reserva de emergência e investimentos que me permitam viver confortavelmente.' },
+    { id: 4, viagem: 'Viajar pelo menos duas vezes por ano, explorando novos destinos e culturas.' },
+    { id: 5, hobby: 'Aprender e desenvolver diáriamente com minha familia '} 
+  ]
+
   const mensagem = () => {
     alert('Função disparada!')
   }
@@ -74,6 +88,14 @@ function App() {
   const lidarComClique = () => {
     console.log('O botão no componente filho foi clicado!');
   };
+
+
+  const MyFunction = () => {
+    console.log('Função passada como prop foi executada!');
+    let x = 5;
+    let y = 10;
+    console.log(x + y);
+  }
 
   return (
     <> <h1>{name}, Aprofunde seus Fundamentos do react</h1>
@@ -169,6 +191,28 @@ function App() {
     ))}
   </section>
 
+  <section>
+    <h3>Meus Sonhos:</h3>
+
+{MyLifeDreams.map((dream) => (
+  <ul>
+    <MyDreams
+      key={dream.id}
+      profissional={dream.profissional}
+      area={dream.area}
+      salario={dream.salario}
+      pessoal={dream.pessoal}
+      paises={dream.paises}
+      financeiro={dream.financeiro}
+      viagem={dream.viagem}
+      hobby={dream.hobby}
+    />
+  </ul>
+))}
+   
+</section>
+  
+
 
   {/* A PROPIEDADE - PROPS CHILDREN*/}
  
@@ -186,7 +230,11 @@ function App() {
       {/* 2. Passamos a função para o componente filho */}
       <NewFunctionProp aoClicar={lidarComClique} />
     </div>
+
+
+    {/* 3. No componente filho, a função é chamada quando o botão é clicado */}
   
+   <ExecuteFunction MyFunction={MyFunction} />
 
     </>
   )
