@@ -86,3 +86,109 @@ strong {
  
 }
 
+
+.Romario {
+  color: rgb(0, 255, 47);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://s2.glbimg.com/JmAoGEaZuKMmZqvw-_ZndT6QmdA=/smart/e.glbimg.com/og/ed/f/original/2016/02/20/gettyimages-72495722.jpg'); opacity: 0.5;
+  background-size: cover;
+}
+
+.Ronaldo {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://static.znews.vn/static/topic/person/cristiano-ronaldo.jpg'); opacity: 0.5;
+  background-size: cover;
+}
+
+.KeylorNavas {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://4.bp.blogspot.com/-XLSWc3Rfrhw/VsbUzniwGlI/AAAAAAAAARc/FIiPNHbXazA/s1600/Keylor%2BNavas.jpg'); opacity: 0.5;
+  background-size: cover;
+}
+
+.GonzaloHiguain {
+  color: rgb(128, 0, 128);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://static.klix.ba/media/images/vijesti/130923031.1_xl.jpg?v=1'); opacity: 0.5;
+  background-size: cover;
+}
+
+.LuisSuarez {
+  color: rgb(255, 165, 0);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://album.mediaset.es/cimg/1000001/2017/04/03/luissuarez1024_505a.jpg?w=1024'); opacity: 0.5;
+  background-size: cover;
+}
+
+.Messi {
+  color: rgb(0, 0, 255);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://wallpapercave.com/wp/wp11875474.jpg'); opacity: 0.5;
+  background-size: cover;
+}
+
+.Kaká {
+  color: rgb(255, 255, 0);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://www.kodromagazine.com/wp-content/uploads/2022/09/El-brasileno-Kaka-posa-con-el-Balon-de-Oro-2007-en-una-imagen-fechada-en-Milan-el-4-de-diciembre-de-2007-scaled.jpg'); opacity: 0.5;
+  background-size: cover;
+}
+
+.Neymar {
+  color: rgb(255, 0, 255);
+  font-weight: bold;
+  font-size: 1.6em;
+  width: 100px;
+  height:100px;
+  margin: 10px;
+  background-image: url('https://wallsdesk.com/wp-content/uploads/2016/07/Neymar-HD.jpg'); opacity: 0.5;
+  background-size: cover;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #555;
+  scale: 1.2;
+  border: 2px solid #555;
+  transition: all 0.3s ease;
+}

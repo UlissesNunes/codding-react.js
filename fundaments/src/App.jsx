@@ -9,6 +9,10 @@ import NewFunctionProp from './components/newFunctionProp.jsx'
 import ExecuteFunction from './components/executeFunction.jsx'
 import MyDreams from './components/myDreams.jsx'  
 import './App.css'
+import MyFunctionExecute from './components/MyFunctionExecute.jsx'
+import StateElevation from './components/StateElevation.jsx'
+import StateLift from './components/StateLift.jsx'
+import HandleStateLift from './components/HandleStateLift.jsx'
 
 function App() {
   const name = [useState('Ulisses')]
@@ -95,6 +99,17 @@ function App() {
     let x = 5;
     let y = 10;
     console.log(x + y);
+  }
+
+
+  const myMensageexe = () => {
+    console.log('Função executada no componente pai e passada como prop para o componente filho!')
+  }
+
+  const [mensage , setMensage] = useState('');
+
+  const handleClick = (msg) => {
+    setMensage(msg);
   }
 
   return (
@@ -235,6 +250,20 @@ function App() {
     {/* 3. No componente filho, a função é chamada quando o botão é clicado */}
   
    <ExecuteFunction MyFunction={MyFunction} />
+
+   <MyFunctionExecute myfunctionexe={myMensageexe}/>
+
+   {/* 4. State Lift */}
+   { // Aqui criamos uma variável de estado no componente pai (App) e uma função para atualizar essa variável.
+   }
+   { // Em seguida, passamos a variável de estado e a função para o componente filho (StateElevation) como props.
+   }
+   { // No componente filho, exibimos a mensagem recebida do componente pai e temos um botão que, quando clicado, chama a função passada pelo componente pai para atualizar a mensagem.
+   }
+    <StateLift />
+   <StateElevation msg={mensage} />
+    <HandleStateLift handleClick={handleClick} />
+   {/* 5. Finalizando State Lift */}
 
     </>
   )
