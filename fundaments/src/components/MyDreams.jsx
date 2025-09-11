@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types';
+// utilizamos o prop-types para validar as props que são passadas para o componente
+// e também para definir valores padrão para as props que não são passadas
+// fazendo assim evitamos erros no código garantindo que o componente sempre terá valores válidos para trabalhar ao renderizar a interface gráfica do usuário.
 
 function MyDreams({ profissional, salario, area, pessoal, paises, financeiro, viagem, hobby }) {
   return (
@@ -23,6 +26,8 @@ function MyDreams({ profissional, salario, area, pessoal, paises, financeiro, vi
   );
 }
 
+// validando as props que são passadas para o componente
+
 MyDreams.propTypes = {
     profissional: PropTypes.string,
     salario: PropTypes.number,
@@ -33,6 +38,8 @@ MyDreams.propTypes = {
     viagem: PropTypes.string,
     hobby: PropTypes.string,
     };
+
+    // definindo valores padrão para as props que não são passadas
 
 MyDreams.defaultProps = {
     profissional: 'Não informado',

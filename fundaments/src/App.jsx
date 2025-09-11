@@ -13,6 +13,8 @@ import MyFunctionExecute from './components/MyFunctionExecute.jsx'
 import StateElevation from './components/StateElevation.jsx'
 import StateLift from './components/StateLift.jsx'
 import HandleStateLift from './components/HandleStateLift.jsx'
+import Handlemarca from './components/Handlemarca.jsx'
+import MarcaChange from './components/marcaChange.jsx' 
 
 function App() {
   const name = [useState('Ulisses')]
@@ -111,6 +113,14 @@ function App() {
   const handleClick = (msg) => {
     setMensage(msg);
   }
+
+
+  const [marca , setMarca] = useState('');
+  
+  const handleMarcaChange = (mar) => {
+    setMarca(mar);
+  };
+
 
   return (
     <> <h1>{name}, Aprofunde seus Fundamentos do react</h1>
@@ -264,6 +274,11 @@ function App() {
    <StateElevation msg={mensage} />
     <HandleStateLift handleClick={handleClick} />
    {/* 5. Finalizando State Lift */}
+
+ <h1>Outro exemplo de State lifting</h1>
+   <MarcaChange mar={marca} />
+   <Handlemarca handleMarca={handleMarcaChange} />
+   {/* 6. Finalizando State Lift com outro exemplo */}
 
     </>
   )

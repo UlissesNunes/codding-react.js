@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function myLivros({titulo, autor, ano, genero, preco}) {
   return (

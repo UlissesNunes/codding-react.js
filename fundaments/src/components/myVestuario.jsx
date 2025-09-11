@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function myVestuario({preço, marca, tamanho, cor, tipo}) {
   return (
