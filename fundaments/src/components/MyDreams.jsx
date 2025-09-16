@@ -26,7 +26,7 @@ function MyDreams({ profissional, salario, area, pessoal, paises, financeiro, vi
   );
 }
 
-// validando as props que são passadas para o componente
+// validando as props que são passadas para o componente 1 
 
 MyDreams.propTypes = {
     profissional: PropTypes.string,
