@@ -15,6 +15,8 @@ import StateLift from './components/StateLift.jsx'
 import HandleStateLift from './components/HandleStateLift.jsx'
 import Handlemarca from './components/Handlemarca.jsx'
 import MarcaChange from './components/marcaChange.jsx' 
+import UserDetails from './components/UserDetails.jsx'
+import GameDetails from './components/GameDetails.jsx'
 
 function App() {
   const name = [useState('Ulisses')]
@@ -121,6 +123,27 @@ function App() {
     setMarca(mar);
   };
 
+
+const userGame = [
+  {id: 1, name: 'Ulisses', age: 19, job: 'Programador'},
+  {id: 2, name: 'Mariana', age: 23, job: 'Estudante'},
+  {id: 3, name: 'Jamal', age: 22, job: 'Jogador de Futebol'},
+  {id: 4, name: 'Ana', age: 15, job: 'Designer'},
+  {id: 5, name: 'Carlos', age: 16, job: 'Engenheiro'},
+]
+
+  const userWork = [
+    {id: 1, name: 'Ulisses', age: 19, job: 'Programador'},
+    {id: 2, name: 'Mariana', age: 23, job: 'Estudante'},
+    {id: 3, name: 'Jamal', age: 22, job: 'Jogador de Futebol'},
+    {id: 4, name: 'Ana', age: 15, job: 'Designer'},
+    {id: 5, name: 'Carlos', age: 16, job: 'Engenheiro'},
+    {id: 6, name: 'Beatriz', age: 12, job: 'Médica'},
+    {id: 7, name: 'Fernando', age: 14, job: 'Advogado'},
+    {id: 8, name: 'Larissa', age: 17, job: 'Arquiteta'},
+    {id: 9, name: 'Rafael', age: 29, job: 'Professor'},
+    {id: 10, name: 'Sofia', age: 24, job: 'Jornalista'},
+  ]
 
   return (
     <> <h1>{name}, Aprofunde seus Fundamentos do react</h1>
@@ -279,6 +302,21 @@ function App() {
    <MarcaChange mar={marca} />
    <Handlemarca handleMarca={handleMarcaChange} />
    {/* 6. Finalizando State Lift com outro exemplo */}
+
+
+    <UserDetails userWork={userWork} />
+
+
+    {userGame.map((user) => (
+      <GameDetails 
+       key={user.id}
+        name= {user.name} 
+        age= {user.age}
+        job= {user.job}
+      
+      />))}
+    {/* Aqui estamos passando o array de objetos userWork como prop para o componente UserDetails */}
+    {/* No componente UserDetails, usamos o método map para iterar sobre o array e renderizar os detalhes de cada usuário */}
 
     </>
   )
