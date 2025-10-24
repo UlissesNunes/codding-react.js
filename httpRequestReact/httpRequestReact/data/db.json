@@ -1,0 +1,47 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Samsung Galaxy S23",
+            "price": 4499.99,
+            "category": "Electronics",
+            "inStock": true
+        },
+        {
+            "id": 2,
+            "name": "MacBook Air M2",
+            "price": 9499.99,
+            "category": "Electronics",
+            "inStock": true
+        },
+        {
+            "id": 3,
+            "name": "Philips 3200 Series",
+            "price": 2899.99,
+            "category": "Home Appliances",
+            "inStock": false
+        },
+        {
+            "id": 4,
+            "name": "Nike Air Zoom Pegasus",
+            "price": 729.99,
+            "category": "Sports",
+            "inStock": true
+        },
+        {
+            "id": 5,
+            "name": "Adidas Ultraboost 22",
+            "price": 739.90,
+            "category": "Books",
+            "inStock": true
+        },
+        {
+            "id": 6,
+            "name": "Sony WH-1000XM4",
+            "price": 1499.99,
+            "category": "Electronics",
+            "inStock": false
+        }
+
+    ]
+}
