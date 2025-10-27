@@ -1,0 +1,135 @@
+/* --- ESTILOS GERAIS DO HEADER --- */
+.header {
+    background-color: #390b50;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    /* Mantém o flex para alinhamento geral */
+    display: flex;
+    justify-content: center; /* Centraliza o nav-menu */
+    align-items: center;
+    position: sticky; /* Para manter fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container de largura máxima para centralizar e dar espaço */
+.nav-menu {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 3rem; /* Ajuste o tamanho do ícone */
+    color: #ecdfff; 
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 2rem; /* Tamanho do título no desktop */
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* --- ESTILOS DE NAVEGAÇÃO (DESKTOP) --- */
+.menu-items ul {
+    display: flex;
+    gap: 2.5rem; /* Espaçamento maior para desktop */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li a {
+    color: #bdbdbd; /* Cinza claro, melhor legibilidade no fundo escuro */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu-items li a:hover {
+    color: #FF5733; /* Cor de destaque no hover */
+}
+
+/* --- ESTILOS DO BOTÃO HAMBÚRGUER (INICIALMENTE ESCONDIDO) --- */
+.menu-toggle-btn {
+    display: none; /* Escondido por padrão no desktop */
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* --- MEDIA QUERY (MOBILE) --- */
+@media (max-width: 768px) {
+    .header {
+        padding: 0.8rem 1rem;
+    }
+    
+    /* 1. Ocultar o H1 no Mobile */
+    .header-title {
+        display: none;
+    }
+
+    /* 2. Mostrar o Botão Hambúrguer */
+    .menu-toggle-btn {
+        display: block; 
+        z-index: 1001; /* Garante que fique acima do menu */
+    }
+
+    /* 3. Posicionamento e Animação do Menu Lateral */
+    .menu-items {
+        /* Estilos de tela cheia lateral */
+        position: fixed;
+        top: 0;
+        right: 0; /* Começa à direita da tela */
+        width: 70%; /* Largura do menu (ex: 70% da tela) */
+        max-width: 300px;
+        height: 100vh;
+        background-color: #2e0940; /* Cor de fundo do menu */
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        
+        /* Ocultar inicialmente */
+        transform: translateX(100%); 
+        transition: transform 0.4s ease-in-out; /* Animação de deslize */
+        
+        /* Garante que o menu esteja acima de tudo */
+        z-index: 999; 
+        
+        /* Ajuste do layout interno para mobile */
+        display: flex;
+        justify-content: flex-start; /* Alinha os links ao topo/início */
+        padding-top: 80px; /* Dá espaço para o header fixo */
+    }
+
+    /* Estado Aberto: Desliza para a posição 0 */
+    .menu-items.menu-open {
+        transform: translateX(0);
+    }
+    
+    /* Ajuste da lista de links para mobile (Vertical) */
+    .menu-items ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .menu-items li {
+        margin-bottom: 20px;
+    }
+
+    .menu-items li a {
+        font-size: 1.2rem;
+        color: #ffffff; /* Cor branca para melhor contraste no menu */
+    }
+}
