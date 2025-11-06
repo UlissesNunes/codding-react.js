@@ -5,16 +5,19 @@
 }
 
 
-main {
-  display: flex;
-  flex-wrap: wrap;
+main.produtosVisu {
+  display: grid;
+  
+  grid-gap: 20px;
   justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  columns: 2;
+  gap: 20px;
+  
   padding: 20px;
 }
-
 .product {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -67,7 +70,7 @@ p {
   margin: 10px 0;
 }
 
-.product-price {
+.productPrice {
   color: #b12704;
   font-size: 1.1em;
   margin: 5px 0;

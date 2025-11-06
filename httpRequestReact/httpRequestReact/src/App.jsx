@@ -1,5 +1,7 @@
 import "./App.css";
 import Header from "../components/Header";
+import TopoMain from "../components/TopoMain";
+import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 
 const url = "http://localhost:3000/products";
@@ -23,25 +25,23 @@ function App() {
     <>
       <Header />
       <section className="destaque-menu"><img src="/public/ELETROSTORE.png" alt="" /></section>
-      <main className="marketplace-container">
-        <p className="p">bem vindo a</p>
-        <h1 className="marketplace-title">EletroStore Bahia</h1>
-        <p className="marketplace-description">
-          Rápido e fácil: Encontre eletrodomésticos de qualidade com preços que cabem no seu bolso.
-        </p>
-
-        <ul>
-          {products.map((product) => (
-            <li key={product.id}>
-              {product.name} 
-              
-              Preço - R$: {product.price}
-              <br />
-              <img src={product.image} alt={product.name} />
-            </li>
-          ))}
-        </ul>
-      </main>
+     
+<TopoMain />
+      
+        <main className="produtosVisu">
+          <ul>
+            {products.map((product) => (
+              <li key={product.id}>
+                {product.name}
+          
+                Preço - R$: <span className="productPrice">{product.price}</span>
+                <br />
+                <img src={product.image} alt={product.name} />
+              </li>
+            ))}
+          </ul>
+        </main>
+      <Footer />
     </>
   );
 }

@@ -21,7 +21,7 @@ function Header() {
                 <div className="logo-container">
                     <AiFillDingtalkCircle className="logo-icon" />
                  
-                    <h1 className="header-title">EletroStore</h1> 
+                    
                 </div>
                 <button 
                     className="menu-toggle-btn" 
