@@ -4,7 +4,6 @@
             "id": 1,
             "name": "Samsung Galaxy S23",
             "price": 4499.99,
-            "description": "Smartphone Samsung Galaxy S23 com câmera avançada e desempenho excepcional.",
             "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530811_sd.jpg",
             "category": "Electronics"
            
@@ -13,37 +12,49 @@
             "id": 2,
             "name": "MacBook Air M2",
             "price": 9499.99,
-            "category": "Electronics",
-            "inStock": true
+            "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530811_sd.jpg",
+            "category": "Electronics"
+           
         },
         {
             "id": 3,
             "name": "Philips 3200 Series",
             "price": 2899.99,
-            "category": "Home Appliances",
-            "inStock": false
+            "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530811_sd.jpg",
+            "category": "Home Appliances"
         },
         {
             "id": 4,
-            "name": "Nike Air Zoom Pegasus",
-            "price": 729.99,
-            "category": "Sports",
-            "inStock": true
+            "name": "Motorola Edge 60",
+            "price":2899.99,
+            "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530811_sd.jpg",
+            "category": "Electronics"
         },
         {
             "id": 5,
-            "name": "Adidas Ultraboost 22",
-            "price": 739.90,
-            "category": "Books",
-            "inStock": true
+            "name": "Sony PlayStation 5",
+            "price": 4999.99,
+            "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530811_sd.jpg",
+            "category": "Gaming"
+
         },
         {
             "id": 6,
-            "name": "Sony WH-1000XM4",
-            "price": 1499.99,
-            "category": "Electronics",
-            "inStock": false
-        }
+            "name": "Nintendo Switch",
+            "price": 2999.99,
+            "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530811_sd.jpg",
+            "category": "Gaming"
 
+        },
+        {
+            "id": 7,
+            "name": "Xiomi Poco x7 pro",
+            "price":1699.99,
+            "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6530/6530811_sd.jpg",
+            "category": "Electronics"
+
+
+        }
+        
     ]
 }
